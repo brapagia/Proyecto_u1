@@ -1,0 +1,231 @@
+/* Estilos específicos para la página de reservaciones */
+.form-reserva-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #c69b5a;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.form-reserva-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.form-reserva fieldset {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #fafafa;
+}
+
+.form-reserva legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #8d0a0a;
+    padding: 0 0.5rem;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #8d0a0a;
+}
+
+/* Cuadrícula de habitaciones */
+.habitaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.habitacion-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.habitacion-check:hover {
+    border-color: #8d0a0a;
+    box-shadow: 0 2px 8px rgba(0,119,204,0.1);
+}
+
+.habitacion-check input[type="checkbox"] {
+    display: none; /* Ocultamos el checkbox nativo */
+}
+
+.check-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #8d0a0a;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.habitacion-check input[type="checkbox"]:checked + .check-custom {
+    background-color: #8d0a0a;
+    border-color: #8d0a0a;
+}
+
+.habitacion-check input[type="checkbox"]:checked + .check-custom::after {
+    content: "✓";
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nombre-habitacion {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Fechas */
+.fechas-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.campo-fecha {
+    flex: 1 1 250px;
+}
+
+.campo-fecha label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.campo-fecha input[type="date"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.campo-fecha input[type="date"]:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0,119,204,0.3);
+}
+
+/* Pago */
+.pago-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.campo-pago label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.campo-pago input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.campo-pago input:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0,119,204,0.3);
+}
+
+/* Contacto */
+.campo-email {
+    max-width: 400px;
+    margin-top: 1rem;
+}
+
+.campo-email label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.campo-email input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.campo-email input:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0,119,204,0.3);
+}
+
+/* Botón de pago */
+.btn-pagar {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    background-color: #8d0a0a;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-pagar:hover {
+    background-color: #ba0707;
+}
+
+.btn-pagar:active {
+    transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-reserva-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .habitaciones-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .fechas-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .pago-grid {
+        grid-template-columns: 1fr;
+    }
+}

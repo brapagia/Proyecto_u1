@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Reservaciones · Hotel Quinta Dalam</title>
+    <link rel="stylesheet" href="styleReser.css">
+    <title>Reservaciones · Hotel Quinta Aldama</title>
 </head>
 <body>
     <header>
         <!-- Barra superior con enlaces secundarios -->
         <div class="barra_sup">
             <div class="barra_supdere">
-                <a href="Iniciosesion.html">Inicia sesión</a> | <a href="Registro.html">Resgistrate</a> | <a href="#">Support</a>
+                <a href="Iniciosesion.html">Inicia sesión</a> | 
+                <a href="Registro.html">Regístrate</a> | 
+                <a href="#">Support</a>
             </div>
         </div>
 
@@ -21,60 +24,137 @@
                 <li><a href="Reservaciones.html">Reservaciones</a></li>
                 <li><a href="Catalogo.html">Habitaciones</a></li>                
                 <li class="brand"><a href="index.html">Quinta Dalam</a></li>  
-                <li><a href="MisionVision.html">Sobre nostros</a></li>              
-                <li><a href="Contacto.html">Contactanos</a></li>
+                <li><a href="MisionVision.html">Conocenos</a></li>              
+                <li><a href="Contacto.html">Contáctanos</a></li>
             </ul>
         </nav>
-    </header>    
-    <form>
-        <label for = "H1">Habitación Tzintzunzan</label>
-        <input type ="checkbox"  id = "H1" name = "H1"/>
-        <label for = "H2">Habitación Paracho</label>
-        <input type ="checkbox" id = "H2" name = "H2"/>
-        <label for = "H3">Habitación Yunuen</label>
-        <input type ="checkbox" id = "H3" name = "H4"/>
-        <br>
-        <label for = "H4">Habitación Patzcuaro</label>
-        <input type ="checkbox"  id = "H4" name = "H4"/>
-        <label for = "H5">Habitación Coeneo</label>
-        <input type ="checkbox" id = "H5" name = "H5"/>
-        <label for = "H6">Habitación Janitzio</label>
-        <input type ="checkbox" id = "H6" name = "H5"/>
-        <br>
-        <label for = "H7">Suite Queucio</label>
-        <input type ="checkbox"  id = "H7" name = "H7"/>
-        <label for = "H8">Habitación Morelia</label>
-        <input type ="checkbox" id = "H8" name = "H8"/>
-        <label for = "H9">Habitación Tacambaro</label>
-        <input type ="checkbox" id = "H9" name = "H9"/>
-        <br>
-        <label for = "H10">Habitación Uruapan</label>
-        <input type ="checkbox"  id = "H10" name = "H0"/>
-        <label for = "H12">Habitación Tlalpujuaba</label>
-        <input type ="checkbox" id = "H12" name = "H12"/>
-        <label for = "H13">Habitación Cuitzeo</label>
-        <input type ="checkbox" id = "H13" name = "H13"/>
-        <label for = "H14">Habitación Cuanajo</label>
-        <input type ="checkbox" id = "H14" name = "H14"/>
-        <hr>
-        <label for = "Fecllegada">Fecha de llegada</label>
-        <input type ="datetime" id = "Fecllegada" name = "Fecllegada" placeholder="DD/MM/YY"/>
-        <label for = "Fecsalida">Fecha de salida</label>
-        <input type ="datetime" id = "Fecsalida" name = "Fecsalida" placeholder="DD/MM/YY"/>
-        <hr>
-        <label for = "numTar">Número de la tarjeta</label>
-        <input id = "numTar" name = "numTar"/>
-        <br>
-        <label for = "Fecexp">Fecha de expiración</label>
-        <input id = "Fecexp" name = "Fecexp"/>
-        <label for = "cvv">CVV</label>
-        <input id = "cvv" name = "cvv" placeholder="Tres numeros de la parte trasera de la tarjeta"/>
-        <br>
-        <label for = "correo">Correo electrónico</label>
-        <input type ="email"  id = "correo" name = "correo" />
-        <br>
-        <button type = "button">Pagar y guardar</button>
-    </form>
+    </header>
+
+    <main class="contenido-principal">
+        <div class="form-reserva-container">
+            <h1>Reserva tu habitación</h1>
+            <form class="form-reserva" action="#" method="post">
+
+                <!-- Selección de habitaciones -->
+                <fieldset class="grupo-habitaciones">
+                    <legend>Elige las habitaciones que deseas reservar</legend>
+                    <div class="habitaciones-grid">
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Tzintzuntzan">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Tzintzuntzan</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Paracho">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Paracho</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Yunuen">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Yunuen</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Patzcuaro">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Pátzcuaro</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Coeneo">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Coeneo</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Janitzio">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Janitzio</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Queucio">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Suite Queucio</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Morelia">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Morelia</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Tacambaro">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Tacámbaro</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Uruapan">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Uruapan</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Tlalpujahua">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Tlalpujahua</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Cuitzeo">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Cuitzeo</span>
+                        </label>
+                        <label class="habitacion-check">
+                            <input type="checkbox" name="habitacion[]" value="Cuanajo">
+                            <span class="check-custom"></span>
+                            <span class="nombre-habitacion">Habitación Cuanajo</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Fechas de estancia -->
+                <fieldset class="grupo-fechas">
+                    <legend>Fechas de tu estancia</legend>
+                    <div class="fechas-flex">
+                        <div class="campo-fecha">
+                            <label for="fecha-llegada">Fecha de llegada:</label>
+                            <input type="date" id="fecha-llegada" name="fecha_llegada" required>
+                        </div>
+                        <div class="campo-fecha">
+                            <label for="fecha-salida">Fecha de salida:</label>
+                            <input type="date" id="fecha-salida" name="fecha_salida" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Datos de pago -->
+                <fieldset class="grupo-pago">
+                    <legend>Información de pago</legend>
+                    <div class="pago-grid">
+                        <div class="campo-pago full-width">
+                            <label for="num-tarjeta">Número de tarjeta:</label>
+                            <input type="text" id="num-tarjeta" name="num_tarjeta" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                        </div>
+                        <div class="campo-pago">
+                            <label for="fecha-exp">Fecha de expiración:</label>
+                            <input type="month" id="fecha-exp" name="fecha_exp" required>
+                        </div>
+                        <div class="campo-pago">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" pattern="\d{3}" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Correo electrónico -->
+                <fieldset class="grupo-contacto">
+                    <legend>Datos de contacto</legend>
+                    <div class="campo-email">
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-pagar">Pagar y guardar reservación</button>
+            </form>
+        </div>
+    </main>
+
     <footer>
         <p>&copy; 2026 Hotel Quinta Aldama. Todos los derechos reservados.</p>
     </footer>
