@@ -1,40 +1,490 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Quinta Aldama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylehabi.css">
+    <title>Habitaciones · Hotel Quinta Dalam</title>
 </head>
 <body>
-    <h1>Hotel Quinta Aldama</h1>
-     <a href = "Index.html">Inicio</a>
-     <a href = "Reservaciones.html" >Reservaciones</a>
-     <p>Bienvenido, le presentamos las habitaciones con las que contamos para que se hospede con nosotros</p>
-     <hr>
-     <p>Habitación Tzintzunzan</p>
-     <hr>
-     <p> Habitación Paracho</p>
-     <hr>
-     <p> Habitación Yunuen</p>
-     <hr>
-     <p> Habitación Patzcuaro</p>
-     <hr>
-     <p> Habitación Coeneo</p>
-     <hr>
-     <p>Habitación Janitzio</p>
-     <hr>
-     <p>Suite Queucio</p>
-     <hr>
-     <p>Habitación Morelia</p>
-     <hr>
-     <p>Habitación Tacambaro</p>
-     <hr>
-     <p>Habitación Uruapan</p>
-     <hr>
-     <p>Habitación Tlalpujuaba</p>
-     <hr>
-     <p>Habitación Cuitzeo</p>
-     <hr>
-     <p>Habitación Cuanajo</p>
+    <header>
+        <!-- Barra superior con enlaces secundarios -->
+        <div class="barra_sup">
+            <div class="barra_supdere">
+                <a href="Iniciosesion.html">Inicia sesión</a> | <a href="Registro.html">Resgistrate</a> | <a href="#">Support</a>
+            </div>
+        </div>
+
+        <!-- Barra de navegación principal -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="Reservaciones.html">Reservaciones</a></li>
+                <li><a href="Catalogo.html">Habitaciones</a></li>
+                <li class="brand"><a href="index.html">Quinta Aldama</a></li>
+                <li><a href="MisionVision.html">Sobre nosotros</a></li>
+                <li><a href="Contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro">
+            <p>Bienvenido, le presentamos las habitaciones con las que contamos para que se hospede con nosotros.</p>
+        </div>
+
+        <!-- Contenedor de tarjetas (cards) -->
+        <div class="catalogo-grid">
+            <!-- Tarjeta 1: Tzintzuntzan -->
+            <div class="card">
+                <a href="#modal-tzintzuntzan" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=1" alt="Habitación Tzintzuntzan">
+                    <div class="card-info">
+                        <h3>Habitación Tzintzuntzan</h3>
+                        <p>Amplia habitación con vista al jardín, cama king size y baño completo.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 2: Paracho -->
+            <div class="card">
+                <a href="#modal-paracho" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=2" alt="Habitación Paracho">
+                    <div class="card-info">
+                        <h3>Habitación Paracho</h3>
+                        <p>Espacio acogedor con decoración artesanal, ideal para parejas.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 3: Yunuen -->
+            <div class="card">
+                <a href="#modal-yunuen" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=3" alt="Habitación Yunuen">
+                    <div class="card-info">
+                        <h3>Habitación Yunuen</h3>
+                        <p>Vista al lago, cama matrimonial y balcón privado.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 4: Patzcuaro -->
+            <div class="card">
+                <a href="#modal-patzcuaro" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=4" alt="Habitación Patzcuaro">
+                    <div class="card-info">
+                        <h3>Habitación Patzcuaro</h3>
+                        <p>Habitación familiar con dos camas dobles y área de estar.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 5: Coeneo -->
+            <div class="card">
+                <a href="#modal-coeneo" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=5" alt="Habitación Coeneo">
+                    <div class="card-info">
+                        <h3>Habitación Coeneo</h3>
+                        <p>Rústica y elegante, con chimenea y tina de hidromasaje.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 6: Janitzio -->
+            <div class="card">
+                <a href="#modal-janitzio" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=6" alt="Habitación Janitzio">
+                    <div class="card-info">
+                        <h3>Habitación Janitzio</h3>
+                        <p>Pequeña pero funcional, perfecta para viajes de negocios.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 7: Suite Queucio -->
+            <div class="card">
+                <a href="#modal-queucio" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=7" alt="Suite Queucio">
+                    <div class="card-info">
+                        <h3>Suite Queucio</h3>
+                        <p>Suite de lujo con sala independiente, jacuzzi y terraza.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 8: Morelia -->
+            <div class="card">
+                <a href="#modal-morelia" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=8" alt="Habitación Morelia">
+                    <div class="card-info">
+                        <h3>Habitación Morelia</h3>
+                        <p>Estilo colonial, cerca de la alberca, con desayuno incluido.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 9: Tacambaro -->
+            <div class="card">
+                <a href="#modal-tacambaro" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=9" alt="Habitación Tacambaro">
+                    <div class="card-info">
+                        <h3>Habitación Tacambaro</h3>
+                        <p>Tranquilidad y naturaleza, con hamaca en el balcón.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 10: Uruapan -->
+            <div class="card">
+                <a href="#modal-uruapan" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=10" alt="Habitación Uruapan">
+                    <div class="card-info">
+                        <h3>Habitación Uruapan</h3>
+                        <p>Moderna, con Smart TV y café de cortesía.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 11: Tlalpujahua -->
+            <div class="card">
+                <a href="#modal-tlalpujahua" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=11" alt="Habitación Tlalpujahua">
+                    <div class="card-info">
+                        <h3>Habitación Tlalpujahua</h3>
+                        <p>Temática de minas, con detalles en plata y cama king.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 12: Cuitzeo -->
+            <div class="card">
+                <a href="#modal-cuitzeo" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=12" alt="Habitación Cuitzeo">
+                    <div class="card-info">
+                        <h3>Habitación Cuitzeo</h3>
+                        <p>Vista a la isla, ideal para fotógrafos.</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Tarjeta 13: Cuanajo -->
+            <div class="card">
+                <a href="#modal-cuanajo" class="card-enlace">
+                    <img src="https://picsum.photos/400/300?random=13" alt="Habitación Cuanajo">
+                    <div class="card-info">
+                        <h3>Habitación Cuanajo</h3>
+                        <p>Artesanal, con textiles típicos y cama queen.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- MODALES (uno por habitación) con carrusel CSS (radio buttons) -->
+        <!-- Modal Tzintzuntzan -->
+        <div id="modal-tzintzuntzan" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Tzintzuntzan</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-tzintzuntzan" id="tzin1" checked>
+                    <input type="radio" name="carrusel-tzintzuntzan" id="tzin2">
+                    <input type="radio" name="carrusel-tzintzuntzan" id="tzin3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item">
+                            <img src="https://picsum.photos/800/500?random=1" alt="Tzintzuntzan 1">
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="https://picsum.photos/800/500?random=2" alt="Tzintzuntzan 2">
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="https://picsum.photos/800/500?random=3" alt="Tzintzuntzan 3">
+                        </div>
+                    </div>                   
+                    <div class="carrusel-indicadores">
+                        <label for="tzin1" class="indicador"></label>
+                        <label for="tzin2" class="indicador"></label>
+                        <label for="tzin3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Amplia habitación con vista al jardín, cama king size y baño completo.</p>
+            </div>
+        </div>
+        <!-- Modal Paracho -->
+        <div id="modal-paracho" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Paracho</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-paracho" id="par1" checked>
+                    <input type="radio" name="carrusel-paracho" id="par2">
+                    <input type="radio" name="carrusel-paracho" id="par3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=4" alt="Paracho 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=5" alt="Paracho 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=6" alt="Paracho 3"></div>
+                    </div>                    
+                    <div class="carrusel-indicadores">
+                        <label for="par1" class="indicador"></label>
+                        <label for="par2" class="indicador"></label>
+                        <label for="par3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Espacio acogedor con decoración artesanal, ideal para parejas.</p>
+            </div>
+        </div>
+        <!-- Modal Yunuen -->
+       <div id="modal-yunuen" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Paracho</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-yunuen" id="yun1" checked>
+                    <input type="radio" name="carrusel-yunuen" id="yun2">
+                    <input type="radio" name="carrusel-yunuen" id="yun3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=4" alt="Yunuen 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=5" alt="Yunuen 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=6" alt="Yunuen 3"></div>
+                    </div>                    
+                    <div class="carrusel-indicadores">
+                        <label for="yun1" class="indicador"></label>
+                        <label for="yun2" class="indicador"></label>
+                        <label for="yun3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Espacio acogedor con decoración artesanal, ideal para parejas.</p>
+            </div>
+        </div>
+        <!-- Modal Patzcuaro -->
+        <div id="modal-patzcuaro" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Patzcuaro</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-patzcuaro" id="pat1" checked>
+                    <input type="radio" name="carrusel-patzcuaro" id="pat2">
+                    <input type="radio" name="carrusel-patzcuaro" id="pat3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Patzcuaro 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Patzcuaro 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Patzcuaro 3"></div>
+                    </div>                    
+                    <div class="carrusel-indicadores">
+                        <label for="pat1" class="indicador"></label>
+                        <label for="pat2" class="indicador"></label>
+                        <label for="pat3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+        <!-- Modal Coeneo -->
+        <div id="modal-coeneo" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Coeneo</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-coeneo" id="coen1" checked>
+                    <input type="radio" name="carrusel-coeneo" id="coen2">
+                    <input type="radio" name="carrusel-coeneo" id="coen3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Coeneo 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Coeneo 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Coeneo 3"></div>
+                    </div>
+                    <div class="carrusel-indicadores">
+                        <label for="coen1" class="indicador"></label>
+                        <label for="coen2" class="indicador"></label>
+                        <label for="coen3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+
+        <!-- Modal Janitzio -->
+        <div id="modal-janitzio" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Janitzio</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-janitzio" id="jani1" checked>
+                    <input type="radio" name="carrusel-janitzio" id="jani2">
+                    <input type="radio" name="carrusel-janitzio" id="jani3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Janitzio 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Janitzio 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Janitzio 3"></div>
+                    </div>                    
+                    <div class="carrusel-indicadores">
+                        <label for="jani1" class="indicador"></label>
+                        <label for="jani2" class="indicador"></label>
+                        <label for="jani3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+
+        <!-- Modal Queucio -->
+        <div id="modal-queucio" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Queucio</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-queucio" id="que1" checked>
+                    <input type="radio" name="carrusel-queucio" id="que2">
+                    <input type="radio" name="carrusel-queucio" id="que3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Queucio 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Queucio 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Queucio 3"></div>
+                    </div>
+                    <div class="carrusel-indicadores">
+                        <label for="que1" class="indicador"></label>
+                        <label for="que2" class="indicador"></label>
+                        <label for="que3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+       
+        <!-- Modal Morelia -->
+        <div id="modal-morelia" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Morelia</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-morelia" id="more1" checked>
+                    <input type="radio" name="carrusel-morelia" id="more2">
+                    <input type="radio" name="carrusel-morelia" id="more3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Morelia 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Morelia 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Morelia 3"></div>
+                    </div>
+                    <div class="carrusel-indicadores">
+                        <label for="more1" class="indicador"></label>
+                        <label for="more2" class="indicador"></label>
+                        <label for="more3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Tacambaro -->
+        <div id="modal-tacambaro" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Tacambaro</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-tacambaro" id="taca1" checked>
+                    <input type="radio" name="carrusel-tacambaro" id="taca2">
+                    <input type="radio" name="carrusel-tacambaro" id="taca3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Tacambaro 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Tacambaro 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Tacambaro 3"></div>
+                    </div>
+                    <div class="carrusel-indicadores">
+                        <label for="taca1" class="indicador"></label>
+                        <label for="taca2" class="indicador"></label>
+                        <label for="taca3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+
+        <!-- Modal Uruapan -->
+        <div id="modal-uruapan" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Uruapan</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-uruapan" id="uru1" checked>
+                    <input type="radio" name="carrusel-uruapan" id="uru2">
+                    <input type="radio" name="carrusel-uruapan" id="uru3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Uruapan 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Uruapan 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Uruapan 3"></div>
+                    </div>
+                    <div class="carrusel-indicadores">
+                        <label for="uru1" class="indicador"></label>
+                        <label for="uru2" class="indicador"></label>
+                        <label for="uru3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+
+        <!-- Modal Tlalpujahua -->
+        <div id="modal-tlalpujahua" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Tlalpujahua</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-tlalpujahua" id="tla1" checked>
+                    <input type="radio" name="carrusel-tlalpujahua" id="tla2">
+                    <input type="radio" name="carrusel-tlalpujahua" id="tla3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Tlalpujahua 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Tlalpujahua 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Tlalpujabua 3"></div>
+                    </div>
+                    <div class="carrusel-indicadores">
+                        <label for="tla1" class="indicador"></label>
+                        <label for="tla2" class="indicador"></label>
+                        <label for="tla3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+
+        <!-- Modal Cuitzeo -->
+        <div id="modal-cuitzeo" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Cuitzeo</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-cuitzeo" id="cui1" checked>
+                    <input type="radio" name="carrusel-cuitzeo" id="cui2">
+                    <input type="radio" name="carrusel-cuitzeo" id="cui3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Cuitzeo 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Cuitzeo 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Cuitzeo 3"></div>
+                    </div>
+                    <div class="carrusel-indicadores">
+                        <label for="cui1" class="indicador"></label>
+                        <label for="cui2" class="indicador"></label>
+                        <label for="cui3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+        
+        <!-- Modal Cuanajo -->
+        <div id="modal-cuanajo" class="modal">
+            <div class="modal-contenido">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Habitación Cuanajo</h2>
+                <div class="carrusel">
+                    <input type="radio" name="carrusel-cuanajo" id="cua1" checked>
+                    <input type="radio" name="carrusel-cuanajo" id="cua2">
+                    <input type="radio" name="carrusel-cuanajo" id="cua3">
+                    <div class="carrusel-imagenes">
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=10" alt="Cuanajo 1"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=11" alt="Cuanajo 2"></div>
+                        <div class="carrusel-item"><img src="https://picsum.photos/800/500?random=12" alt="Cuanajo 3"></div>
+                    </div>
+                    <div class="carrusel-indicadores">
+                        <label for="cua1" class="indicador"></label>
+                        <label for="cua2" class="indicador"></label>
+                        <label for="cua3" class="indicador"></label>
+                    </div>
+                </div>
+                <p class="modal-descripcion">Habitación familiar con dos camas dobles y área de estar.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Hotel Quinta Aldama. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

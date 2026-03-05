@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Quinta Aldama</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Reservaciones · Hotel Quinta Dalam</title>
 </head>
 <body>
-    <h1>Hotel Quinta Aldama</h1>
-    <a href = "Index.html">Inicio</a>
-    <p>Selecciona las habitaciones en las que desees hospedarte</p>    
+    <header>
+        <!-- Barra superior con enlaces secundarios -->
+        <div class="barra_sup">
+            <div class="barra_supdere">
+                <a href="Iniciosesion.html">Inicia sesión</a> | <a href="Registro.html">Resgistrate</a> | <a href="#">Support</a>
+            </div>
+        </div>
+
+        <!-- Barra de navegación principal -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="Reservaciones.html">Reservaciones</a></li>
+                <li><a href="Catalogo.html">Habitaciones</a></li>                
+                <li class="brand"><a href="index.html">Quinta Dalam</a></li>  
+                <li><a href="MisionVision.html">Sobre nostros</a></li>              
+                <li><a href="Contacto.html">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>    
     <form>
         <label for = "H1">Habitación Tzintzunzan</label>
         <input type ="checkbox"  id = "H1" name = "H1"/>
@@ -58,5 +75,8 @@
         <br>
         <button type = "button">Pagar y guardar</button>
     </form>
+    <footer>
+        <p>&copy; 2026 Hotel Quinta Aldama. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,304 @@
+/* Estilos para el catálogo de habitaciones */
+.intro {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-enlace {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    padding: 1.5rem;
+}
+
+.card-info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.card-info p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* MODALES con :target */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    text-align: center;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #aaa;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.cerrar-modal:hover {
+    color: #000;
+}
+
+.modal h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.modal-descripcion {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Carrusel con radio buttons */
+.carrusel {
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.carrusel input[type="radio"] {
+    display: none;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    width: 300%; /* 3 imágenes */
+    transition: margin-left 0.5s;
+}
+
+.carrusel-item {
+    width: 33.333%;
+    box-sizing: border-box;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+/* Posicionamiento según radio seleccionado */
+#tzin1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#tzin2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#tzin3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+/* Repetir para cada habitación (seleccionar por id) */
+#par1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#par2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#par3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#yun1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#yun2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#yun3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#pat1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#pat2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#pat3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#coen1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#coen2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#coen3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#jani1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#jani2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#jani3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#que1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#que2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#que3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#more1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#more2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#more3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#taca1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#taca2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#taca3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#uru1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#uru2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#uru3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#tla1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#tla2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#tal3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#cui1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#cui2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#cui3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+
+#cua1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#cua2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#cua3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+/* Indicadores */
+.carrusel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Resaltar indicador activo */
+#tzin1:checked ~ .carrusel-indicadores label[for="tzin1"],
+#tzin2:checked ~ .carrusel-indicadores label[for="tzin2"],
+#tzin3:checked ~ .carrusel-indicadores label[for="tzin3"] {
+    background-color: #0077cc;
+}
+
+/* Repetir para cada habitación */
+#par1:checked ~ .carrusel-indicadores label[for="par1"],
+#par2:checked ~ .carrusel-indicadores label[for="par2"],
+#par3:checked ~ .carrusel-indicadores label[for="par3"] {
+    background-color: #0077cc;
+}
+
+#yun1:checked ~ .carrusel-indicadores label[for="yun1"],
+#yun2:checked ~ .carrusel-indicadores label[for="yun2"],
+#yun3:checked ~ .carrusel-indicadores label[for="yun3"] {
+    background-color: #0077cc;
+}
+
+#pat1:checked ~ .carrusel-indicadores label[for="pat1"],
+#pat2:checked ~ .carrusel-indicadores label[for="pat2"],
+#pat3:checked ~ .carrusel-indicadores label[for="pat3"] {
+    background-color: #0077cc;
+}
+
+#coen1:checked ~ .carrusel-indicadores label[for="coen1"],
+#coen2:checked ~ .carrusel-indicadores label[for="coen2"],
+#coen3:checked ~ .carrusel-indicadores label[for="coen3"] {
+    background-color: #0077cc;
+}
+
+#jani1:checked ~ .carrusel-indicadores label[for="jani1"],
+#jani2:checked ~ .carrusel-indicadores label[for="jani2"],
+#jani3:checked ~ .carrusel-indicadores label[for="jani3"] {
+    background-color: #0077cc;
+}
+
+#que1:checked ~ .carrusel-indicadores label[for="que1"],
+#que2:checked ~ .carrusel-indicadores label[for="que2"],
+#que3:checked ~ .carrusel-indicadores label[for="que3"] {
+    background-color: #0077cc;
+}
+
+#more1:checked ~ .carrusel-indicadores label[for="more1"],
+#more2:checked ~ .carrusel-indicadores label[for="more2"],
+#more3:checked ~ .carrusel-indicadores label[for="more3"] {
+    background-color: #0077cc;
+}
+
+#taca1:checked ~ .carrusel-indicadores label[for="taca1"],
+#taca2:checked ~ .carrusel-indicadores label[for="taca2"],
+#taca3:checked ~ .carrusel-indicadores label[for="taca3"] {
+    background-color: #0077cc;
+}
+
+#uru1:checked ~ .carrusel-indicadores label[for="uru1"],
+#uru2:checked ~ .carrusel-indicadores label[for="uru2"],
+#uru3:checked ~ .carrusel-indicadores label[for="uru3"] {
+    background-color: #0077cc;
+}
+
+#tla1:checked ~ .carrusel-indicadores label[for="tla1"],
+#tla2:checked ~ .carrusel-indicadores label[for="tla2"],
+#tla3:checked ~ .carrusel-indicadores label[for="tla3"] {
+    background-color: #0077cc;
+}
+
+#cui1:checked ~ .carrusel-indicadores label[for="cui1"],
+#cui2:checked ~ .carrusel-indicadores label[for="cui2"],
+#cui3:checked ~ .carrusel-indicadores label[for="cui3"] {
+    background-color: #0077cc;
+}
+
+#cua1:checked ~ .carrusel-indicadores label[for="cua1"],
+#cua2:checked ~ .carrusel-indicadores label[for="cua2"],
+#cua3:checked ~ .carrusel-indicadores label[for="cua3"] {
+    background-color: #0077cc;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .catalogo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 1rem;
+        gap: 1rem;
+    }
+}
