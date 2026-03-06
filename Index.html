@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Hotel Quinta Dalam</title>
+    <title>Hotel Quinta Aldama</title>
 </head>
 <body>
     <header>
         <!-- Barra superior con enlaces secundarios -->
         <div class="barra_sup">
             <div class="barra_supdere">
-                <a href="Iniciosesion.html">Inicia sesión</a> | <a href="Registro.html">Resgistrate</a> | <a href="#">Support</a>
+                <a href="Iniciosesion.html">Inicia sesión</a> | <a href="registro.html">Regístrate</a>
             </div>
         </div>
 
@@ -21,15 +21,55 @@
                 <li><a href="Reservaciones.html">Reservaciones</a></li>
                 <li><a href="Catalogo.html">Habitaciones</a></li>                
                 <li class="brand"><a href="index.html">Quinta Dalam</a></li>  
-                <li><a href="MisionVision.html">Conocenos</a></li>              
-                <li><a href="Contacto.html">Contactanos</a></li>
+                <li><a href="Conocenos.html">Conócenos</a></li>              
+                <li><a href="Contacto.html">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <p class="texto">Bienvenido a nuestro Hotel, donde se sentirá como en su hogar.</p>
-    
+    <main class="contenido-principal">
+        <!-- Hero section con imagen de fondo y texto -->
+        <section class="hero">
+            <div class="hero-texto">
+                <h1>Hotel Quinta Dalam</h1>
+                <p>Descubre el lujo y la comodidad en un entorno único</p>
+                <a href="Reservaciones.html" class="btn-hero">Reserva ahora</a>
+            </div>
+        </section>
+
+        <!-- Texto de bienvenida -->
+        <section class="bienvenida">
+            <h2>Bienvenido a tu hogar lejos de casa</h2>
+            <p>
+                En Hotel Quinta Dalam nos esforzamos por brindarle una experiencia inolvidable.
+                Nuestras instalaciones están diseñadas para su confort, con habitaciones temáticas, 
+                servicios de primera clase y un personal dispuesto a hacer de su estancia algo especial. 
+                Ya sea por negocios o placer, aquí encontrará el descanso que merece.
+            </p>
+        </section>
+
+        <!-- Carrusel de fotos del hotel -->
+        <section class="carrusel-hotel">
+            <h2>Galería del hotel</h2>
+            <div class="carrusel">
+                <input type="radio" name="carrusel-index" id="index1" checked>
+                <input type="radio" name="carrusel-index" id="index2">
+                <input type="radio" name="carrusel-index" id="index3">
+                <input type="radio" name="carrusel-index" id="index4">
+                <div class="carrusel-imagenes">
+                    <div class="carrusel-item"><img src="https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk" alt="h1" ></div>
+                    <div class="carrusel-item"><img src="https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA" alt="h2" ></div>
+                    <div class="carrusel-item"><img src="https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1" alt="h3" ></div>
+                    <div class="carrusel-item"><img src="https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL" alt="h4" ></div>
+                </div>                
+                <div class="carrusel-indicadores">
+                    <label for="index1" class="indicador"></label>
+                    <label for="index2" class="indicador"></label>
+                    <label for="index3" class="indicador"></label>
+                    <label for="index4" class="indicador"></label>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>

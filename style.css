@@ -167,3 +167,158 @@ footer {
 .enlace-form a:hover {
     text-decoration: underline;
 }
+
+/* Hero section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.hero-texto {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-texto h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero-texto p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #e78311;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-hero:hover {
+    background-color: #653806;
+    transform: scale(1.05);
+}
+
+/* Bienvenida */
+.bienvenida {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.bienvenida h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.bienvenida p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Carrusel del hotel (reutilizando estilos anteriores, adaptado para 4 imágenes) */
+.carrusel-hotel {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.carrusel-hotel h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Ajustes para que el carrusel ocupe el ancho deseado */
+.carrusel-hotel .carrusel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.carrusel-hotel .carrusel-imagenes {
+    display: flex;
+    width: 400%; /* 4 imágenes */
+    transition: margin-left 0.5s;
+}
+
+.carrusel-hotel .carrusel-item {
+    width: 25%;
+}
+
+.carrusel-hotel .carrusel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Posicionamiento para las 4 imágenes */
+#index1:checked ~ .carrusel-imagenes { margin-left: 0; }
+#index2:checked ~ .carrusel-imagenes { margin-left: -100%; }
+#index3:checked ~ .carrusel-imagenes { margin-left: -200%; }
+#index4:checked ~ .carrusel-imagenes { margin-left: -300%; }
+
+/* Indicadores */
+.carrusel-hotel .carrusel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.carrusel-hotel .indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Resaltar indicador activo */
+#index1:checked ~ .carrusel-indicadores label[for="index1"],
+#index2:checked ~ .carrusel-indicadores label[for="index2"],
+#index3:checked ~ .carrusel-indicadores label[for="index3"],
+#index4:checked ~ .carrusel-indicadores label[for="index4"] {
+    background-color: #0077cc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-texto h1 {
+        font-size: 2.5rem;
+    }
+    .hero-texto p {
+        font-size: 1.2rem;
+    }
+    .carrusel-hotel .carrusel-item img {
+        height: 300px;
+    }
+}

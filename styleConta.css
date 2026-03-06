@@ -1,0 +1,153 @@
+/* Estilos específicos para la página de contacto */
+.contacto-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f3d3b1;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contacto-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.contacto-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    margin-bottom: 3rem;
+}
+
+.redes-sociales h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.redes-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.red-social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.red-social:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.red-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Colores específicos para cada red */
+.red-social.facebook {
+    background-color: #1877f2;
+}
+.red-social.instagram {
+    background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5);
+}
+.red-social.tiktok {
+    background-color: #000000;
+}
+
+/* Formulario de comentario */
+.form-comentario {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+}
+
+.form-comentario h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.campo-textarea {
+    margin-bottom: 1.5rem;
+}
+
+.campo-textarea label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.campo-textarea textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo-textarea textarea:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0,119,204,0.3);
+}
+
+.btn-enviar {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #8d0a0a;    
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-enviar:hover {
+    background-color: #da540c;
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
+
+/* Responsive para contacto */
+@media (max-width: 600px) {
+    .redes-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .red-social {
+        width: 200px;
+        justify-content: center;
+    }
+}

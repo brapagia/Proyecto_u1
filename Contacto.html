@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Contacto · Hotel Quinta Dalam</title>
+    <link rel="stylesheet" href="styleConta.css">
+    <title>Contacto · Hotel Quinta Aldama</title>
 </head>
 <body>
     <header>
         <!-- Barra superior con enlaces secundarios -->
         <div class="barra_sup">
             <div class="barra_supdere">
-                <a href="Iniciosesion.html">Inicia sesión</a> | <a href="Registro.html">Resgistrate</a> | <a href="#">Support</a>
+                <a href="Iniciosesion.html">Inicia sesión</a> | <a href="Registro.html">Regístrate</a> 
             </div>
         </div>
 
@@ -20,30 +21,53 @@
             <ul>
                 <li><a href="Reservaciones.html">Reservaciones</a></li>
                 <li><a href="Catalogo.html">Habitaciones</a></li>                
-                <li class="brand"><a href="index.html">Quinta Dalam</a></li>  
-                <li><a href="MisionVision.html">Conocenos</a></li>              
-                <li><a href="Contacto.html">Contactanos</a></li>
+                <li class="brand"><a href="index.html">Quinta Aldama</a></li>  
+                <li><a href="Conocenos.html">Conócenos</a></li>              
+                <li><a href="Contacto.html">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
-    <div>
-    <br>
-    <p>Contactanos por nuestras redes sociales</p>
-    <br>
-    <p>Nuestro correo electrónico: [inserte correo electronico del hotel]</p>
-    <br>
-    <p>Nuestro número telefonico es: 44-XXXXXXXXX</p>
-    <br>
-    <p>Instagram</p>
-    <br>
-    <p>Facebook</p>
-    <br>
-    <p>Tiktok</p>
-    <form>
-        <textarea rows="5" cols="50" placeholder="Escribenos un comentario..."></textarea>
-        <br>
-        <button type="submit">Enviar comentario</button>
-    </form>   
-    </div>
+
+    <main class="contenido-principal">
+        <div class="contacto-container">
+            <h1>Contáctanos</h1>
+            <p class="contacto-intro">¿Tienes alguna pregunta o comentario? Estamos aquí para ayudarte.</p>
+
+            <!-- Redes sociales -->
+            <div class="redes-sociales">
+                <h2>Síguenos en redes</h2>
+                <div class="redes-grid">
+                    <a href="https://www.facebook.com/profile.php?id=61584681841684" target="_blank" class="red-social facebook">
+                        <span class="red-icon">f</span>
+                        <span class="red-nombre">Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/quintadalam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="red-social instagram">
+                        <span class="red-icon">📷</span>
+                        <span class="red-nombre">Instagram</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@quintadalam?lang=es" target="_blank" class="red-social tiktok">
+                        <span class="red-icon">🎵</span>
+                        <span class="red-nombre">TikTok</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulario de comentario -->
+            <div class="form-comentario">
+                <h2>Envíanos un mensaje</h2>
+                <form action="#" method="post">
+                    <div class="campo-textarea">
+                        <label for="comentario">Comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="5" placeholder="Escribe aquí tu comentario o duda..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hotel Quinta Aldama. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
