@@ -13,8 +13,7 @@ $(document).ready(function() {
                 let emailValido = validarEmail();
                 let passValido = validarPassword();
 
-                if (emailValido && passValido) {
-                    // Simular envío de datos usando AJAX
+                if (emailValido && passValido) {                   
                     let datos = {
                         email: $('#email').val(),
                         password: $('#password').val()
