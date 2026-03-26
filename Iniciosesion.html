@@ -1,53 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Inicio de sesión · Hotel Quinta Dalam</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <script src="script_inises.js"></script>
+    <title>Inicio de sesión · Hotel Quinta Dalam</title>  
 </head>
 <body>
     <header>
-        <!-- Barra superior con enlaces secundarios -->
         <div class="barra_sup">
             <div class="barra_supdere">
-                <a href="Iniciosesion.html">Inicia sesión</a> | <a href="Registro.html">Resgistrate</a> 
+                <a href="Iniciosesion.html">Inicia sesión</a> | <a href="registro.html">Regístrate</a>
             </div>
         </div>
-
-        <!-- Barra de navegación principal -->
         <nav class="navbar">
             <ul>
                 <li><a href="Reservaciones.html">Reservaciones</a></li>
-                <li><a href="Catalogo.html">Habitaciones</a></li>                
-                <li class="brand"><a href="index.html">Quinta Dalam</a></li>  
-                <li><a href="Conocenos.html">Conocenos</a></li>              
-                <li><a href="Contacto.html">Contactanos</a></li>
+                <li><a href="Catalogo.html">Habitaciones</a></li>
+                <li class="brand"><a href="index.html">Quinta Dalam</a></li>
+                <li><a href="Conocenos.html">Conócenos</a></li>
+                <li><a href="Contacto.html">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
 
-  <main>
+    <main>
         <div class="form-container">
             <h2>Iniciar sesión</h2>
-            <form action="#" method="post" class="form-login">
+            <form id="loginForm" action="#" method="post" class="form-login">
                 <div class="campo">
                     <label for="email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
                 </div>
                 <div class="campo">
                     <label for="password">Contraseña:</label>
                     <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="passwordError"></span>
                 </div>
                 <button type="submit" class="btn-submit">Entrar</button>
             </form>
             <p class="enlace-form">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
         </div>
     </main>
-<footer>
+
+    <footer>
         <p>&copy; 2026 Hotel Quinta Dalam. Todos los derechos reservados.</p>
-        <a href="https://validator.w3.org/" target="_blank"><img src="https://drive.google.com/thumbnail?id=1enoBu4CNO2x4vKON877k-YREigPGO2rc" alt="validacion HTML" width="110"></a>
-        <a href="https://jigsaw.w3.org/css-validator/" target="_blank"><img src="https://drive.google.com/thumbnail?id=1HISIYRa6WSoEGBEDkgK0sNncWAN5NmWh" alt="validacion css" width="115"></a>
+        <a href="https://validator.w3.org/" target="_blank">
+            <img src="https://drive.google.com/thumbnail?id=1enoBu4CNO2x4vKON877k-YREigPGO2rc" alt="validacion HTML" width="110">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
+            <img src="https://drive.google.com/thumbnail?id=1HISIYRa6WSoEGBEDkgK0sNncWAN5NmWh" alt="validacion css" width="115">
+        </a>
     </footer>
+
 </body>
 </html>

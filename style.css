@@ -310,6 +310,21 @@ footer {
     background-color: #0077cc;
 }
 
+.error-message {
+            color: #d9534f;
+            font-size: 0.85rem;
+            display: block;
+            margin-top: 5px;
+        }
+        #errorGeneral {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+            padding: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
 /* Responsive */
 @media (max-width: 768px) {
     .hero-texto h1 {
