@@ -294,6 +294,81 @@
 #cua3:checked ~ .carrusel-indicadores label[for="cua3"] {
     background-color: #0077cc;
 }
+
+/* Carrusel con JavaScript */
+.carrusel-js {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.carrusel-item {
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.carrusel-item img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carrusel-btn {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carrusel-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.anterior {
+    left: 10px;
+}
+
+.siguiente {
+    right: 10px;
+}
+
+.carrusel-indicadores-js {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.indicador.activo {
+    background-color: #333;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .catalogo-grid {
