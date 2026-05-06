@@ -4,6 +4,7 @@ const habitaciones = [
         nombre: "Habitación Tzintzuntzan",
         descripcion: "Amplia habitación con vista al jardín, cama king size y baño completo.",
         imgCard: "https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk",
+        precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk",
             "https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk",
@@ -15,6 +16,7 @@ const habitaciones = [
         nombre: "Habitación Paracho",
         descripcion: "Espacio acogedor con decoración artesanal, ideal para parejas.",
         imgCard: "https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA",
+        precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA",
             "https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA",
@@ -26,6 +28,7 @@ const habitaciones = [
         nombre: "Habitación Yunuen",
         descripcion: "Vista al lago, cama matrimonial y balcón privado.",
         imgCard: "https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1",
             "https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1",
@@ -37,6 +40,7 @@ const habitaciones = [
         nombre: "Habitación Patzcuaro",
         descripcion: "Habitación familiar con dos camas dobles y área de estar.",
         imgCard: "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
             "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
@@ -48,6 +52,7 @@ const habitaciones = [
         nombre: "Habitación Coeneo",
         descripcion: "Rústica y elegante, con chimenea y tina de hidromasaje.",
         imgCard: "https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk",
             "https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk",
@@ -59,6 +64,7 @@ const habitaciones = [
         nombre: "Habitación Janitzio",
         descripcion: "Pequeña pero funcional, perfecta para viajes de negocios.",
         imgCard: "https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA",
             "https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA",
@@ -70,6 +76,7 @@ const habitaciones = [
         nombre: "Suite Queucio",
         descripcion: "Suite de lujo con sala independiente, jacuzzi y terraza.",
         imgCard: "https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1",
             "https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1",
@@ -81,6 +88,7 @@ const habitaciones = [
         nombre: "Habitación Morelia",
         descripcion: "Estilo colonial, cerca de la alberca, con desayuno incluido.",
         imgCard: "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
             "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
@@ -92,6 +100,7 @@ const habitaciones = [
         nombre: "Habitación Tacambaro",
         descripcion: "Tranquilidad y naturaleza, con hamaca en el balcón.",
         imgCard: "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
             "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
@@ -103,6 +112,7 @@ const habitaciones = [
         nombre: "Habitación Uruapan",
         descripcion: "Moderna, con Smart TV y café de cortesía.",
         imgCard: "https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk",
             "https://drive.google.com/thumbnail?id=1mfKEWNABrUCpDrVGouM8Xgk4Z7pjyeDk",
@@ -114,6 +124,7 @@ const habitaciones = [
         nombre: "Habitación Tlalpujahua",
         descripcion: "Temática de minas, con detalles en plata y cama king.",
         imgCard: "https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA",
             "https://drive.google.com/thumbnail?id=1mfM_N7Ovu_gMUCLNU7C_cZWwoLdEizyA",
@@ -125,6 +136,7 @@ const habitaciones = [
         nombre: "Habitación Cuitzeo",
         descripcion: "Vista a la isla, ideal para fotógrafos.",
         imgCard: "https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1",
             "https://drive.google.com/thumbnail?id=1KzVjZfdEfM1wA2Di8MJvWpD6Q_Jy4KM1",
@@ -136,6 +148,7 @@ const habitaciones = [
         nombre: "Habitación Cuanajo",
         descripcion: "Artesanal, con textiles típicos y cama queen.",
         imgCard: "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
+         precioPorNoche: 90,
         galeria: [
             "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
             "https://drive.google.com/thumbnail?id=1TrFSjkOqsDp7bNnrtG_QUWuG8f8_K_CL",
@@ -247,3 +260,15 @@ function iniciarCarrusel(modal, totalImagenes) {
         actualizarCarrusel();
     });
 }
+// El resto del código (generar tarjetas con precio) permanece igual,
+// pero en la tarjeta se muestra el precio:
+card.innerHTML = `<a href="#modal-${hab.id}" class="card-enlace">
+    <img src="${hab.imgCard}" alt="${hab.nombre}">
+    <div class="card-info">
+        <h3>${hab.nombre}</h3>
+        <p>${hab.descripcion}</p>
+        <p class="precio"><strong>$${hab.precioPorNoche} USD / noche</strong></p>
+    </div>
+</a>`;
+
+// En el modal también se añade el precio.

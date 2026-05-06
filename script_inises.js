@@ -1,68 +1,49 @@
-$(document).ready(function() {          
-            $('#email').on('input', function() {
-                validarEmail();
-            });
-            $('#password').on('input', function() {
-                validarPassword();
-            });
+$(document).ready(function() {
+    $('#email').on('input', function() { validarEmail(); });
+    $('#password').on('input', function() { validarPassword(); });
 
-            // Manejo del envío del formulario
-            $('#loginForm').on('submit', function(e) {
-                e.preventDefault(); 
-                
-                let emailValido = validarEmail();
-                let passValido = validarPassword();
+    $('#loginForm').on('submit', function(e) {
+        e.preventDefault();
+        let emailValido = validarEmail();
+        let passValido = validarPassword();
 
-                if (emailValido && passValido) {                   
-                    let datos = {
-                        email: $('#email').val(),
-                        password: $('#password').val()
-                    };                    
-                    console.log('Datos enviados:', datos);
-                    alert('Inicio de sesión exitoso (simulación).');                    
-                }
-            });
+        if (emailValido && passValido) {
+            let email = $('#email').val().trim();
+            let password = $('#password').val();
 
-            // Función para validar email
-            function validarEmail() {
-                let email = $('#email').val();
-                let emailValido = false;
-                if (email === '') {
-                    $('#emailError').text('El correo es obligatorio.');
-                } else if (!validarFormatoEmail(email)) {
-                    $('#emailError').text('Ingrese un correo válido (ej: usuario@dominio.com).');
-                } else {
-                    $('#emailError').text('');
-                    emailValido = true;
-                }
-                return emailValido;
+            // Buscar en administradores
+            let admins = JSON.parse(localStorage.getItem("administradores") || "[]");
+            let adminEncontrado = admins.find(a => a.email === email && a.password === password);
+            if (adminEncontrado) {
+                localStorage.setItem("usuarioActual", JSON.stringify({ email: email, rol: "admin" }));
+                alert("Bienvenido administrador.");
+                window.location.href = "admin.html";
+                return;
             }
 
-            // Función para validar contraseña
-            function validarPassword() {
-                let password = $('#password').val();
-                if (password === '') {
-                    $('#passwordError').text('La contraseña es obligatoria.');
-                    return false;
-                } else {
-                    $('#passwordError').text('');
-                    return true;
-                }
+            // Buscar en clientes
+            let clientes = JSON.parse(localStorage.getItem("clientes") || "[]");
+            let clienteEncontrado = clientes.find(c => c.email === email && c.password === password);
+            if (clienteEncontrado) {
+                localStorage.setItem("usuarioActual", JSON.stringify({ email: email, rol: "cliente" }));
+                alert("Inicio de sesión exitoso.");
+                window.location.href = "index.html";
+                return;
             }
 
-            // validar email
-            function validarFormatoEmail(email) {
-                let regex = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
-                return regex.test(email);
-            }
+            alert("Credenciales incorrectas. ¿No estás registrado?");
+        }
+    });
 
-            // Función para mostrar errores generales
-            function mostrarErrorGeneral(mensaje) {                
-                let errorGeneral = $('#errorGeneral');
-                if (errorGeneral.length === 0) {
-                    $('.form-login').prepend('<div id="errorGeneral" class="error-message"></div>');
-                    errorGeneral = $('#errorGeneral');
-                }
-                errorGeneral.text(mensaje).show();
-            }
-        });
+    function validarEmail() {
+        let email = $('#email').val();
+        if (email === '') { $('#emailError').text('El correo es obligatorio.'); return false; }
+        else if (!/^[^\s@]+@([^\s@]+\.)+[^\s@]+$/.test(email)) { $('#emailError').text('Correo inválido.'); return false; }
+        else { $('#emailError').text(''); return true; }
+    }
+    function validarPassword() {
+        let password = $('#password').val();
+        if (password === '') { $('#passwordError').text('La contraseña es obligatoria.'); return false; }
+        else { $('#passwordError').text(''); return true; }
+    }
+});

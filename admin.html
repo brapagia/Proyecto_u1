@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador · Hotel Quinta Aldama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="jquery-4.0.0.min.js"></script>
+    <script src="script_admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="barra_sup">
+            <div class="barra_supdere">
+                <span id="adminUser">Admin</span> | 
+                <a href="#" id="cerrarSesion">Cerrar sesión</a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#" id="btnVerClientes">Clientes Registrados</a></li>
+                <li><a href="#" id="btnAltaAdmin">Alta Administradores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Clientes -->
+        <div id="seccionClientes" class="admin-seccion activa">
+            <h2>Lista de Clientes</h2>
+            <div class="tabla-clientes-container">
+                <table id="tablaClientes">
+                    <thead>
+                        <tr><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Acciones</th></tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sección Alta Admin -->
+        <div id="seccionAltaAdmin" class="admin-seccion">
+            <h2>Registrar nuevo administrador</h2>
+            <form id="formAltaAdmin">
+                <div class="campo">
+                    <label for="adminEmail">Correo electrónico:</label>
+                    <input type="email" id="adminEmail" required>
+                </div>
+                <div class="campo">
+                    <label for="adminPass">Contraseña:</label>
+                    <input type="password" id="adminPass" required>
+                </div>
+                <button type="submit" class="btn-submit">Crear administrador</button>
+            </form>
+            <div id="mensajeAdmin"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hotel Quinta Dalam. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

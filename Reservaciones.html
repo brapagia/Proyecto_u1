@@ -29,6 +29,17 @@
     </header>
 
     <main class="contenido-principal">
+                    <!-- Dentro de main, antes del formulario -->
+            <div id="avisoSesion" class="aviso-sesion" style="display:none;">
+                <p>Debes <a href="Iniciosesion.html">iniciar sesión</a> para realizar una reservación.</p>
+            </div>
+
+            <!-- Dentro del formulario, después de los checkboxes -->
+            <div class="resumen-total">
+                <h3>Resumen de tu reserva</h3>
+                <p>Noches: <span id="totalNoches">0</span></p>
+                <p>Total: $<span id="totalPrecio">0.00</span> USD</p>
+            </div>
         <div class="form-reserva-container">
             <h1>Reserva tu habitación</h1>
             <form class="form-reserva" action="#" method="post">

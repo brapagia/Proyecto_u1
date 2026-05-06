@@ -1,0 +1,52 @@
+.admin-seccion {
+    display: none;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.admin-seccion.activa {
+    display: block;
+}
+.tabla-clientes-container {
+    overflow-x: auto;
+}
+#tablaClientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+#tablaClientes th, #tablaClientes td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+#tablaClientes th {
+    background-color: #c69b5a;
+    color: #8d0a0a;
+}
+.btn-editar, .btn-eliminar {
+    padding: 5px 10px;
+    margin: 0 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-editar {
+    background-color: #0077cc;
+    color: white;
+}
+.btn-eliminar {
+    background-color: #d9534f;
+    color: white;
+}
+#formAltaAdmin {
+    max-width: 500px;
+    margin-top: 1rem;
+}
+#mensajeAdmin {
+    margin-top: 1rem;
+    color: green;
+}
